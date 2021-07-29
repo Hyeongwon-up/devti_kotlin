@@ -20,11 +20,17 @@ class SpringFoxConfig {
         return Docket(DocumentationType.SWAGGER_2)
             .select()
             .apis(RequestHandlerSelectors.basePackage("hw.devti"))
-            .paths(PathSelectors.any())
+            .paths(PathSelectors.regex("/.*"))
             .build()
-
+            .apiInfo(apiInfo())
     }
 
-
+    private fun apiInfo(): ApiInfo {
+        return ApiInfoBuilder().apply {
+            title("BrotherOne Board API")
+            description("API Endpoint for serving file")
+            contact(Contact("Brotherone", "https://github.com/Hyeongwon-up", "leehwdatabase@gmail.com"))
+        }.build()
+    }
 
 }
