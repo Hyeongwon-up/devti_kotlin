@@ -1,4 +1,4 @@
-package hw.devti.domain.advertisement
+package hw.devti.domain.advertisement.entity
 
 import hw.devti.global.code.AdvertisementType
 import java.time.LocalDate
@@ -25,7 +25,7 @@ class Advertisement(
     private var advertisementStartDate: LocalDate,
 
     @Column(name = "advertisement_end_date")
-    private var advertisement: LocalDate,
+    private var advertisementEndDate: LocalDate,
 
     @Enumerated(EnumType.STRING)
     @Column(name = "advertisement_type", insertable = false, updatable = false)
