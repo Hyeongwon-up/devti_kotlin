@@ -15,17 +15,4 @@ data class AdvertisementResDto(
     private var advertisementEndDate: LocalDate,
     private var advertisementType: AdvertisementType
 
-) {
-
-
-    companion object {
-        fun convertResponseDto(advertisement: Advertisement): AdvertisementResDto {
-            return advertisement.run {
-                AdvertisementResDto(id = advertisement., advertiser = adve)
-            }
-        }
-    }
-
-
-
-}
+)
