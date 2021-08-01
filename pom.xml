@@ -203,21 +203,37 @@
         <!--            </plugin>-->
         <!--        </plugins>-->
         <plugins>
+
+
+
+
+
+
+
+
+
+
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <version>${kotlin.version}</version>
+
                 <configuration>
                     <compilerPlugins>
                         <plugin>jpa</plugin>
                         <plugin>spring</plugin>
+                        <plugin>no-arg</plugin>
+
                     </compilerPlugins>
                     <args>
                         <arg>-Xjsr305=strict</arg>
                     </args>
+
+                    <pluginOptions>
+                        <option>no-arg:annotation=com.my.Annotation</option>
+                        <!-- Call instance initializers in the synthetic constructor -->
+                        <!-- <option>no-arg:invokeInitializers=true</option> -->
+                    </pluginOptions>
                 </configuration>
                 <executions>
                     <execution>
