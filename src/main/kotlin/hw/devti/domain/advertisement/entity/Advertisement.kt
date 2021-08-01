@@ -1,5 +1,6 @@
 package hw.devti.domain.advertisement.entity
 
+import hw.devti.domain.advertisement.dto.AdvertisementResDto
 import hw.devti.global.code.AdvertisementType
 import java.time.LocalDate
 import javax.persistence.*
@@ -19,7 +20,7 @@ class Advertisement(
     private var title: String,
 
     @Column(name = "imageUrl")
-    private var imagerUrl: String,
+    private var imageUrl: String,
 
     @Column(name = "advertisement_start_date")
     private var advertisementStartDate: LocalDate,
@@ -30,6 +31,17 @@ class Advertisement(
     @Enumerated(EnumType.STRING)
     @Column(name = "advertisement_type", insertable = false, updatable = false)
     private var advertisementType: AdvertisementType
+) {
 
-
-)
+    fun toResDto(): AdvertisementResDto {
+        return AdvertisementResDto(
+            id = id,
+            advertiser = advertiser,
+            title = title,
+            imageUrl = imageUrl,
+            advertisementStartDate = advertisementStartDate,
+            advertisementEndDate = advertisementEndDate,
+            advertisementType = advertisementType
+        )
+    }
+}
