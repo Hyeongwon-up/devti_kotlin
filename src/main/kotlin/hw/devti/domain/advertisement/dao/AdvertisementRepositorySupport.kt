@@ -6,7 +6,7 @@ import hw.devti.global.code.AdvertisementType
 import org.springframework.transaction.annotation.Transactional
 import javax.annotation.Resource
 
-interface AdvertisementRepositorySupport{
+interface AdvertisementRepositorySupport {
 
     @Transactional(readOnly = true)
     fun findAllByAdvertisementType(advertisementType: AdvertisementType): List<Advertisement>

@@ -17,16 +17,17 @@ class AdvertisementRepositorySupportImpl(
 
 ) : QuerydslRepositorySupport(Advertisement::class.java), AdvertisementRepositorySupport {
 
-   override fun findAllByAdvertisementType(advertisementType: AdvertisementType): List<Advertisement> {
+    override fun findAllByAdvertisementType(advertisementType: AdvertisementType): List<Advertisement> {
         return jpaQueryFactory.selectFrom(advertisement)
             .where(
                 advertisement.advertisementStartDate.before(LocalDate.now())
-                .and(advertisement.advertisementEndDate.after(LocalDate.now()))
-                .and(validateAdvertisementType(advertisementType)))
+                    .and(advertisement.advertisementEndDate.after(LocalDate.now()))
+                    .and(validateAdvertisementType(advertisementType))
+            )
             .fetch()
     }
 
-    private  fun validateAdvertisementType(advertisementType: AdvertisementType): BooleanExpression? {
+    private fun validateAdvertisementType(advertisementType: AdvertisementType): BooleanExpression? {
         if (advertisementType.equals(AdvertisementType.LECTURE)) {
             return advertisement.advertisementType.eq(AdvertisementType.LECTURE)
         }
