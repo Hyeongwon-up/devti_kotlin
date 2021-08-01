@@ -2,11 +2,13 @@ package hw.devti.domain.advertisement.entity
 
 import hw.devti.domain.advertisement.dto.AdvertisementResDto
 import hw.devti.global.code.AdvertisementType
+import hw.devti.global.entity.BaseTimeEntity
 import java.time.LocalDate
+import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
-class Advertisement(
+class Advertisement (
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +33,8 @@ class Advertisement(
     @Enumerated(EnumType.STRING)
     @Column(name = "advertisement_type", insertable = false, updatable = false)
     private var advertisementType: AdvertisementType
-) {
+
+): BaseTimeEntity() {
 
     fun toResDto(): AdvertisementResDto {
         return AdvertisementResDto(
