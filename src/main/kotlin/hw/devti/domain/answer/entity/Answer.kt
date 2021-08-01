@@ -9,7 +9,7 @@ class Answer(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "answer_id")
-    private var id: Long,
+    private var id: Long ?= null,
 
     @Lob
     @Convert(converter = AnswerAttributeConverter::class)

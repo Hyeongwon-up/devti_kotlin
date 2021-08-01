@@ -7,7 +7,7 @@ import javax.validation.constraints.Min
 
 class AnswerAttribute(
 
-    private var id: Long,
+    private var id: Long?= null,
 
     private var answerType: AnswerType,
 
