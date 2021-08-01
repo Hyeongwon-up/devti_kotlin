@@ -11,13 +11,9 @@ import java.util.stream.Collectors
 class AdvertisementService(private val advertisementRepository: AdvertisementRepository) {
 
     fun findAllAdvertisementByAdvertisementType(advertisementType: AdvertisementType): List<AdvertisementResDto>? {
-
         val advertisements: List<Advertisement> = advertisementRepository
             .findAllByAdvertisementType(advertisementType)
-
-        return advertisements.stream()
-            .map<Any>(AdvertisementResDto::convertResponseDto)
-            .collect(Collectors.toList())
+        return advertisements.map{ it.toResDto()}
     }
 
 
