@@ -8,6 +8,9 @@ class DevtiApplicationTests {
 
     @Test
     fun contextLoads() {
+
+
+        val test = listOf("3", "4")
     }
 
 }
