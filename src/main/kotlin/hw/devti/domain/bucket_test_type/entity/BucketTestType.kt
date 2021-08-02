@@ -9,17 +9,17 @@ class BucketTestType(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private var id: Long ?= null,
+    var id: Long ?= null,
 
     @Enumerated(EnumType.STRING)
     @Column(name = "test_type", insertable = false, updatable = false)
-    private var testType: TestType,
+    var testType: TestType,
 
     @Column(name = "description")
-    private var description: String,
+    var description: String,
 
     @Column(name = "phrases")
-    private var phrases: String
+    var phrases: String
 
 ) : BaseTimeEntity() {
 }
