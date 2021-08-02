@@ -7,16 +7,16 @@ import javax.validation.constraints.Min
 
 class AnswerAttribute(
 
-    private var id: Long?= null,
+    var id: Long?= null,
 
-    private var answerType: AnswerType,
+    var answerType: AnswerType,
 
-    private var sequence: Long,
+    var sequence: Long,
 
-    private var bias: BiasType,
+    var bias: BiasType,
 
     @Min(0)
-    private var weight: Float
+    var weight: Float
 
 )
 
