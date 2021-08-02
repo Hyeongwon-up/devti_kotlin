@@ -10,10 +10,12 @@ class Traffic(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "TRAFFIC_ID")
-    private var id: Long ?= null,
+    var id: Long ?= null,
 
     @Enumerated(EnumType.STRING)
     @Column(name = "test_type")
-    private var testType: TestType
+    var testType: TestType
+
+
 
 ): BaseTimeEntity()
