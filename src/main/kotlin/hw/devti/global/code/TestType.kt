@@ -22,4 +22,12 @@ enum class TestType(
         return name
     }
 
+    fun getNext(): TestType {
+        if((this.ordinal + 1) % testTypes.size == testTypes.size - 1) {
+            return testTypes[0]
+        }
+
+        return testTypes[(this.ordinal + 1) % testTypes.size]
+    }
+
 }
