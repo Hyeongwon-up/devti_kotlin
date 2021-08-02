@@ -18,7 +18,7 @@ class Bias(
 
     @Enumerated(EnumType.STRING)
     @Column(name = "bias")
-    private var bias: BiasType,
+    var bias: BiasType,
 
     @Column(name = "kr_bias")
     private var krBias: String,
