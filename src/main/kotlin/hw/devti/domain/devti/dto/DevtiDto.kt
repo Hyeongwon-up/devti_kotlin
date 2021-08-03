@@ -1,7 +1,10 @@
 package hw.devti.domain.devti.dto
 
 import com.sun.istack.NotNull
+import hw.devti.domain.advertisement.entity.Advertisement
+import hw.devti.domain.review.dto.ReviewResDto
 import io.swagger.annotations.ApiModelProperty
+
 
 data class DevtiReqDto(
 
@@ -22,12 +25,12 @@ data class DevtiResDto(
     private val devtiTitle: String,
 
     @ApiModelProperty(value = "DEVTI 총평", example = "당신은 블라블라해요 블라블라하면 블라블라해서 블라블라 할수있을거에요 블라블라~~")
-    private val generalReview: @javax.validation.constraints.NotNull ReviewResDto? = null
+    private val generalReview: ReviewResDto,
 
     @ApiModelProperty(value = "Bias 결과 리스트 ")
-    private val biasResults: List<BiasReviewResult>
+    private val biasResults: List<BiasReviewResult>,
 
     @ApiModelProperty(value = "학습, 채용공고")
-    private val advertisementList: List<Advertisement>? = null
+    private val advertisementList: List<Advertisement>
 
 )
