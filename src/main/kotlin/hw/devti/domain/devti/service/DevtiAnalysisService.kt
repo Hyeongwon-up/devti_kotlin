@@ -18,7 +18,7 @@ class DevtiAnalysisService(
     val biasService: BiasService
 ) {
 
-    fun analysis(answerAttributeList: List<AnswerAttribute>): HashMap<BiasType, Int> {
+    fun analysisAnswer(answerAttributeList: List<AnswerAttribute>): HashMap<BiasType, Int> {
         var weightMap = initBiasWeightMap()
 
         for(answer: AnswerAttribute in answerAttributeList) {
