@@ -11,7 +11,7 @@ class Review(
 
   @Lob
   @Column(length = 500)
-  var headLine : String?,
+  var headLine : String,
 
   @Lob
   @Column(length = 500)
