@@ -2,6 +2,7 @@ package hw.devti.domain.devti.entity
 
 import com.fasterxml.jackson.annotation.JsonBackReference
 import hw.devti.domain.answer.entity.Answer
+import hw.devti.global.entity.BaseTimeEntity
 import javax.persistence.*
 
 @Entity
@@ -22,5 +23,5 @@ class Devti (
     @Column(name = "devti_result")
     var devtiResult: String
 
-)
+): BaseTimeEntity()
 
