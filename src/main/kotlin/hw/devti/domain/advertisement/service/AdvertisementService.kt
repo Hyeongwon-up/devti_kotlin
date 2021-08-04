@@ -16,5 +16,9 @@ class AdvertisementService(private val advertisementRepository: AdvertisementRep
         return advertisements.map{ it.toResDto()}
     }
 
+    fun findAll(): List<Advertisement> {
+        return advertisementRepository.findAll()
+    }
+
 
 }
