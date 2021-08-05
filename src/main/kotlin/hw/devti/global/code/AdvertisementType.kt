@@ -1,6 +1,6 @@
 package hw.devti.global.code
 
-enum class AdvertisementType(private var value: Int) : DevtiEnumerable{
+enum class AdvertisementType(private val value: Int) : DevtiEnumerable{
     ALL(0) ,
     LECTURE(1),
     RECRUIT(2),
