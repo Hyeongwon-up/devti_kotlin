@@ -7,11 +7,13 @@ import java.io.IOException
 class SlackPusher(
     private var slack: Slack
 ) {
-    fun SlackPusher(webhookurl: String, channel: String) {
-        this.slack = Slack(webhookurl)
-            .icon(":smiling_imp")
-            .sendToChannel(channel)
-            .displayName("DEVTI")
+    companion object {
+        fun slackPusher(webhookUrl: String, channel: String) {
+            Slack(webhookUrl)
+                .icon(":smiling_imp")
+                .sendToChannel(channel)
+                .displayName("DEVTI")
+        }
     }
 
     fun pushMessage(message: String) {
