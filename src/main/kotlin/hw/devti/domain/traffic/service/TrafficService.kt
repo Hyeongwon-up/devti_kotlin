@@ -14,7 +14,7 @@ class TrafficService(
 ) {
 
     fun getLastTraffic(): Traffic {
-        var lastTraffic = trafficRepository.findTopByOOrderByIdDesc()
+        var lastTraffic = trafficRepository.findTopByOrderByIdDesc()
 
         if(lastTraffic == null) {
             lastTraffic = Traffic(testType = TestType.TYPE_COMMON_3)
