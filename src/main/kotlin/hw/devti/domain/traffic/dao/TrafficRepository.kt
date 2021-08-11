@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 interface TrafficRepository: JpaRepository<Traffic, Long> {
 
-    fun findTopByOOrderByIdDesc(): Traffic ?= null
+    fun findTopByOrderByIdDesc(): Traffic
 }
