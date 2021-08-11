@@ -2,7 +2,6 @@ package hw.devti.domain.bucket_test_type.service
 
 import hw.devti.domain.bucket_test_type.dao.BucketTestTypeRepository
 import hw.devti.domain.bucket_test_type.dto.BucketTestTypeGetResDto
-import hw.devti.domain.bucket_test_type.entity.BucketTestType
 import hw.devti.domain.traffic.entity.Traffic
 import hw.devti.domain.traffic.service.TrafficService
 import hw.devti.global.code.EntryPoint
