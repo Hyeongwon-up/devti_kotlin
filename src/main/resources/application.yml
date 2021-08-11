@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8070
 
 spring:
   profiles:
@@ -24,10 +24,10 @@ spring:
       return-body-on-update: true
 
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/devti?allowMultiQueries=true&useSSL=false&useUnicode=yes&characterEncoding=UTF-8&characterSetResults=UTF-8&passwordCharacterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:13306/devti2
     username: root
-    password: hw961228*
+    password: password
     initialization-mode: always
 
 logging:
