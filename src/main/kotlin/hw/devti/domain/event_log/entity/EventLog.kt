@@ -5,6 +5,7 @@ import hw.devti.global.code.TestType
 import hw.devti.global.entity.BaseTimeEntity
 import javax.persistence.*
 
+@Entity
 class EventLog(
 
     @Id
@@ -19,4 +20,5 @@ class EventLog(
     @Enumerated(EnumType.STRING)
     @Column(name = "test_type")
     var testType: TestType
+
 ): BaseTimeEntity()
