@@ -239,7 +239,7 @@ INSERT INTO review (review_type, headline, title, contents) VALUES
 ('W', '', '개발 말고도 인생엔 소중한게 많아!', '인생에서 자신을 더 많이 사랑하는 당신! 일 할땐 일 하고 쉴땐 후회없이 푹 쉬고 싶어합니다. 쉬는 시간엔 업무 관련된 모든일은 OFF합니다. 그래야 다음 스케줄을 효과적으로 소화할 수 있습니다!'),
 ('L', '', '일 할때 행복해요', '일을 사랑하는 당신, 주어진 업무에 매사 최선을 다하고 싶어합니다. 목표설정에 따른 행동이 주체적인 사람입니다. 계획에 따라 성과가 최대치 일때 일에 대한 만족감을 얻고 능률이 오릅니다.');
 
-INSERT INTO advertisement (created_at, updated_at, advertisement_ent_date, advertisement_start_date, advertisement_type, advertiser, image_url, title) VALUES
+INSERT INTO advertisement (created_at, updated_at, advertisement_end_date, advertisement_start_date, advertisement_type, advertiser, image_url, title) VALUES
 (now(), now(), now(), now(), 'LECTURE', '김상혁', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.yna.co.kr%2Fview%2FAKR20200117042400030&psig=AOvVaw27KKp3K51zckObAoDLKGxh&ust=1622812930819000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKj2s7fH-_ACFQAAAAAdAAAAABAD', '광고테스트1'),
 (now(), now(), now(), now(), 'LECTURE', '김상혁', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.yna.co.kr%2Fview%2FAKR20200117042400030&psig=AOvVaw27KKp3K51zckObAoDLKGxh&ust=1622812930819000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKj2s7fH-_ACFQAAAAAdAAAAABAD', '광고테스트2'),
 (now(), now(), now(), now(), 'RECRUIT', '김상혁', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.yna.co.kr%2Fview%2FAKR20200117042400030&psig=AOvVaw27KKp3K51zckObAoDLKGxh&ust=1622812930819000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKj2s7fH-_ACFQAAAAAdAAAAABAD', '광고테스트3'),
